@@ -1,5 +1,5 @@
 describe('yoYo', function() {
-	
+
 	var scope,
 		element,
 		compiled,

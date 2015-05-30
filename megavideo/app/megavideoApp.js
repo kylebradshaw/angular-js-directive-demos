@@ -6,7 +6,7 @@ angular.module('megaVideoDemo', []).
 			scope: true,
 			link: function(scope, element, attrs) {
 				scope.sources = [];
-				
+
 				// whitelist of video formats accepted
 				function processSources() {
 					var sourceTypes = {
@@ -18,7 +18,7 @@ angular.module('megaVideoDemo', []).
 					for (source in sourceTypes) {
 						if (attrs.hasOwnProperty(source)) {
 							scope.sources.push(
-								{ type: sourceTypes[source].type, 
+								{ type: sourceTypes[source].type,
 								  src: $sce.trustAsResourceUrl(attrs[source])
 								}
 							);
@@ -27,6 +27,6 @@ angular.module('megaVideoDemo', []).
 				}
 				processSources();
 			}
-			
+
 		}
 	});

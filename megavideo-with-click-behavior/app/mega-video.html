@@ -2,7 +2,7 @@
 	width="{{ video.width }}" 
 	height="{{ video.height }}" 
 	ng-click="video.togglePlay()" 
-	ng-dblclick="video.stop()">
+	ng-dblclick="video.replay()">
 
 	<source  
 		ng-repeat="source in sources" 
